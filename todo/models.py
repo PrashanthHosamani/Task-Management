@@ -2,7 +2,7 @@ from django.db import models
 
 class Uncomplted_Task(models.Model):
     task = models.CharField(max_length=250)
-    is_complted = models.BooleanField(default=False)
+    is_completed = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
