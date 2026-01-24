@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from todo.models import Uncomplted_Task
+from todo.models import Uncompleted_Task
 
 def home(request):
-    tasks = Uncomplted_Task.objects.filter(is_completed = False)
+    tasks = Uncompleted_Task.objects.filter(is_completed = False).order_by("-updated_at")
     context = {
         
         "tasks" : tasks,
